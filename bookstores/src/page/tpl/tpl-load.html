@@ -1,0 +1,24 @@
+<script type="text/x-handlebars-template" id="loadMore-tpl">
+    <div class="tpl-lr">
+        {{#each items}}
+        <a href="./page/detail.html?id={{this.fiction_id}}">
+            <dl>
+                <dt><img src="{{this.cover}}" alt="">
+        <span class="finish">{{#if this.finish}}完结{{else}}连载{{/if}}</span></dt>
+                <dd>
+                    <h4 class="title">{{this.title}}</h4>
+                    <p class="authors">{{this.authors}}</p>
+                    <p class="summary">
+                        {{this.summary}}
+                    </p>
+                    <ol class="tags">
+                        {{#each this.tags}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ol>
+                </dd>
+            </dl>
+        </a>
+        {{/each}}
+    </div>
+</script>

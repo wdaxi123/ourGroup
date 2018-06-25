@@ -1,0 +1,85 @@
+@import '../_config.scss';
+@import '../_mixin.scss';
+header {
+    @include wh(100%, pxTorem(44px));
+    flex-shrink: 0;
+    background: $header-bg;
+    @include flex;
+    @include sizing;
+    padding: 0 pxTorem(15px);
+    font-size: pxTorem(15px);
+    span.icon-sign {
+        @include wh(pxTorem(25px), pxTorem(25px));
+        @include bg('../../imgs/icon-sign.png');
+        background-size: cover;
+    }
+    span.icon-person {
+        @include wh(pxTorem(15px), pxTorem(15px));
+        @include bg('../../imgs/icon-person.png');
+        background-size: cover;
+    }
+    span.icon-back {
+        @include wh(pxTorem(20px), pxTorem(20px));
+        @include bg('../../imgs/icon-back.png');
+        background-size: cover;
+    }
+    >a {
+        @include wh(pxTorem(15px), pxTorem(15px));
+        @include flex;
+    }
+    span.icon-home {
+        @include wh(pxTorem(15px), pxTorem(15px));
+        @include bg('../../imgs/icon-home.png');
+        background-size: cover;
+    }
+    .detail-p {
+        flex: 1;
+        margin-left: pxTorem(15px);
+    }
+    >div {
+        width: 44%;
+        position: relative;
+        @include flex;
+        height: 100%;
+        em.active {
+            color: $tab-active-color;
+        }
+        .line {
+            position: absolute;
+            height: pxTorem(2px);
+            width: pxTorem(33px);
+            background: $header-line-bg;
+            bottom: 0;
+            left: 0;
+            transition: transform .5s;
+            &.move {
+                transform: translate3d(365%, 0, 0);
+            }
+        }
+    }
+}
+
+.search-p {
+    flex: 1;
+    margin: pxTorem(5px) pxTorem(15px);
+    height: pxTorem(34px);
+    flex-shrink: 0;
+    background: $write-color;
+    border: pxTorem(1px) solid $header-bg;
+    @include flex;
+    @include sizing;
+    padding: 0 pxTorem(10px);
+    input {
+        flex: 1;
+        height: 100%;
+        margin: 0 pxTorem(10px);
+        border-left: pxTorem(2px) solid $header-bg;
+        border-right: pxTorem(2px) solid $header-bg;
+        text-indent: pxTorem(8px);
+    }
+    span.icon-search {
+        @include wh(pxTorem(15px), pxTorem(15px));
+        @include bg('../../imgs/icon-search.png');
+        background-size: cover;
+    }
+}

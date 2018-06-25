@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <title>章节目录</title>
+    <link rel="stylesheet" href="../css/chapter.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header></header>
+        <main>
+            <ul class="chapter-list"></ul>
+        </main>
+        <script type="text/x-handlebars-template" id="chapter-tpl">
+            {{#each this}}
+            <li chapter_id="{{chapter_id}}"><span>{{title}}</span><span class="price">{{#unless price}}免费{{/unless}}</span>
+            </li>
+            {{/each}}
+        </script>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['chapter']);
+        })
+    </script>
+</body>
+
+</html>

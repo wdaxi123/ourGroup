@@ -1,0 +1,18 @@
+<script type="text/x-handlebars-template" id="slide2-tpl">
+    <div class="tpl-lr">
+        {{#each data}}
+        <a href="./page/detail.html?id={{this.fiction_id}}">
+            <dl>
+                <dt><img src="{{this.cover}}" alt=""></dt>
+                <dd>
+                    <h4 class="title">{{this.title}}</h4>
+                    <p class="authors">{{this.authors}}</p>
+                    <p class="summary">
+                        {{this.summary}}
+                    </p>
+                </dd>
+            </dl>
+        </a>
+        {{/each}}
+    </div>
+</script>

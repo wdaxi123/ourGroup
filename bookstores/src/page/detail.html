@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header></header>
+        <main>
+            <div></div>
+            <script type="text/x-handlebars-template" id="detail-template">
+                <div class="block book-detail">
+                    {{#with item}}
+                    <dl>
+                        <dt><img src="{{this.cover}}" alt=""></dt>
+                        <dd>
+                            <h4 class="title">{{this.title}}</h4>
+                            <p class="authors">{{this.authors}}</p>
+                            <p class="score">
+                                <span>{{score}}</span>
+                                <span>{{score_count}}个评价</span>
+                            </p>
+                            <p class="price">价格：{{price}}书币/千字</p>
+                            <p class="word_count"><span>字数：{{#count word_count}}{{/count}}万字</span><span class="finish">{{#if finish}}已完结{{else}}连载中{{/if}}</span></p>
+                        </dd>
+                    </dl>
+                    <div class="change-click">
+                        <button class="read">开始阅读</button>
+                        <button class="down">下载</button>
+                    </div>
+                    <div class="content">{{content}}</div>
+                    <p class="catalog">
+                        最新：后记 更新于 2017-5-4 22:14
+                    </p>
+                </div>
+                <div class="block">
+                    <h5 class="type-tags">类别标签</h5>
+                    <ol class="list-tags">
+                        {{#each this.tags}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
+                {{/with}}
+
+
+                <div class="block related">
+                    <p class="">作者其他图书</p>
+                    <div>
+                        {{#each related}}{{#if (limit @index 3)}}
+                        <a href="./detail.html?fiction_id={{this.fiction_id}}">
+                            <dl>
+                                <dt><img src="{{this.cover}}" alt=""></dt>
+                                <dd>{{this.title }}
+                                </dd>
+                            </dl>
+                        </a>{{/if}}{{/each}}
+                    </div>
+                </div>
+                <div class="rights">
+                    <p>图书信息</p>
+                    <p>版权：{{item.rights}}</p>
+                </div>
+            </script>
+        </main>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['detail']);
+        })
+    </script>
+</body>
+
+</html>

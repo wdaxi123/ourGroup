@@ -1,0 +1,140 @@
+@import "_common.scss";
+main>div {
+    @include wh(100%, 100%);
+    overflow-y: scroll;
+}
+
+.book-detail {
+    @include wh(100%, auto);
+    dl {
+        @include wh(100%, pxTorem(170px));
+        @include sizing;
+        padding: pxTorem(22px) pxTorem(18px) pxTorem(12px) pxTorem(18px);
+        @include flex(flex-start);
+        dt {
+            @include wh(35%, 100%);
+            position: relative;
+            flex-shrink: 0;
+            img {
+                @include wh(85%, 95%);
+            }
+        }
+        dd {
+            flex: 1;
+            align-self: flex-start;
+            @include sizing;
+            padding: 0 pxTorem(12px);
+            .title {
+                font-size: pxTorem(16px);
+                line-height: 2.5;
+                color: #222;
+            }
+            .authors {
+                color: green;
+                line-height: 1.3;
+            }
+            p {
+                @include wh(100%, pxTorem(20px));
+                @include flex(flex-start);
+                color: #999;
+                span {
+                    margin-right: pxTorem(5px);
+                    &.finish {
+                        padding: pxTorem(1px) pxTorem(3px);
+                        border-radius: pxTorem(3px);
+                        border: pxTorem(1px) solid #00a0e9;
+                        color: #55b4ec;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.change-click {
+    @include wh(100%, pxTorem(55px));
+    @include sizing;
+    padding: pxTorem(8px) pxTorem(12px);
+    button {
+        @include wh(48%, 100%);
+        outline: none;
+        border-radius: pxTorem(5px);
+        font-size: pxTorem(15px);
+        border: pxTorem(1px) solid #ccc;
+        background: #fff;
+        &.read {
+            color: #fff;
+            background: orange;
+            margin-right: 2%;
+        }
+    }
+}
+
+.content {
+    @include wh(100%, auto);
+    @include sizing;
+    font-size: pxTorem(15px);
+    padding: pxTorem(10px) pxTorem(12px);
+    line-height: pxTorem(22px);
+    color: #666;
+}
+
+.catalog {
+    text-align: center;
+    line-height: pxTorem(44px);
+    color: #999;
+    border-top: pxTorem(1px) solid #eee;
+}
+
+.type-tags {
+    @include sizing;
+    color: #666;
+    padding: pxTorem(10px) 0 0 pxTorem(18px);
+}
+
+.related {
+    @include wh(100%, auto);
+    >p {
+        @include sizing;
+        color: #666;
+        padding: pxTorem(10px) 0 0 pxTorem(18px);
+    }
+    >div {
+        @include wh(100%, auto);
+        @include flex;
+        @include sizing;
+        padding: pxTorem(15px) pxTorem(15px) 0 pxTorem(15px);
+        flex-wrap: wrap;
+        >a {
+            width: 30%;
+            display: block;
+        }
+        dl {
+            width: 100%;
+            dt {
+                margin: 0 auto;
+                @include wh(100%, pxTorem(115px));
+                img {
+                    @include wh(80%, 100%);
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            dd {
+                @include wh(100%, pxTorem(36px));
+                margin: pxTorem(6px) 0 0 10%;
+                color: $gray-color;
+            }
+        }
+    }
+}
+
+.rights {
+    @include wh(100%, auto);
+    @include sizing;
+    color: #666;
+    padding: pxTorem(12px);
+    >p {
+        line-height: 2;
+    }
+}

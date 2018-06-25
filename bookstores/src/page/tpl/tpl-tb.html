@@ -1,0 +1,15 @@
+<script type="text/x-handlebars-template" id="hotWeek-tpl">
+    <div class="tpl-tb">
+        <h3>{{ad_name}}</h3>
+        <div>
+            {{#with data}} {{#each data}}
+            <a href="./page/detail.html?fiction_id={{this.fiction_id}}">
+                <dl>
+                    <dt><img src="{{this.cover}}" alt=""></dt>
+                    <dd>{{this.title }}
+                    </dd>
+                </dl>
+            </a>{{/each}} {{/with}}
+        </div>
+    </div>
+</script>

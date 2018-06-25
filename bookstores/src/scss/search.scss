@@ -1,0 +1,52 @@
+@import "_common.scss";
+main>div {
+    @include wh(100%, 100%);
+    overflow-y: scroll;
+}
+
+.tpl-lr {
+    @include wh(100%, auto);
+    @include sizing;
+    padding: 0 pxTorem(12px);
+    >a {
+        @include wh(100%, auto);
+        display: block;
+        color: #666;
+        dl {
+            @include wh(100%, pxTorem(133px));
+            @include sizing;
+            padding: pxTorem(12px) 0;
+            @include flex(flex-start);
+            dt {
+                @include wh(25%, 100%);
+                position: relative;
+                flex-shrink: 0;
+                img {
+                    @include wh(85%, 95%);
+                }
+            }
+            dd {
+                flex: 1;
+                align-self: flex-start;
+                .title {
+                    font-size: pxTorem(16px);
+                    line-height: 2.5;
+                    color: #222;
+                }
+                .content {
+                    width: 90%;
+                    @include line(2);
+                    line-height: 1.3;
+                }
+                .authors {
+                    line-height: 3;
+                }
+            }
+        }
+    }
+}
+
+.search-result>p {
+    text-align: center;
+    line-height: pxTorem(44px);
+}

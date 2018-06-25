@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header></header>
+        <main>
+            <div>
+                <div class="search-result"></div>
+                <script type="text/x-handlebars-template" id="search-res-tpl">
+                    <div class="tpl-lr">
+                        <a href="./detail.html?fiction_id={{fiction_id}}">
+                            <dl>
+                                <dt><img src="{{cover}}" alt=""></dt>
+                                <dd>
+                                    <h4 class="title">{{title}}</h4>
+                                    <p class="content">
+                                        {{content}}
+                                    </p>
+                                    <p class="authors">
+                                        {{authors}}
+                                    </p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                </script>
+                <ul class="search-list list-tags"></ul>
+
+                <script type="text/x-handlebars-template" id="search-tags">
+                    {{#each ads}}
+                    <li>{{ad_name}}</li>
+                    {{/each}}
+                </script>
+            </div>
+
+        </main>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['search']);
+        })
+    </script>
+</body>
+
+</html>

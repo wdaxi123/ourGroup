@@ -1,0 +1,13 @@
+<script type="text/x-handlebars-template" id="tpl-header">
+    {{#if istrue}}
+    <span class="icon-back"></span>
+    <p class="search-p">
+        <span class="icon-search"></span>
+        <input type="text" placeholder="输入书名/作者/关键字">
+        <i>搜索</i>
+    </p>
+    {{else}}
+    <span class="icon-back"></span>
+    <p class="detail-p">{{title}}</p>
+    <span class="icon-home"></span> {{/if}}
+</script>

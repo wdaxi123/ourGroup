@@ -1,0 +1,20 @@
+@import '_common.scss';
+.chapter-list {
+    @include wh(100%, auto);
+    li {
+        @include wh(100%, pxTorem(44px));
+        font-size: pxTorem(14px);
+        @include sizing;
+        padding: 0 pxTorem(12px);
+        @include flex;
+        color: #666;
+        border-bottom: pxTorem(1px) solid #eee;
+        .price {
+            color: #6cb378;
+            font-size: pxTorem(15px);
+        }
+        &.active {
+            color: #F35D02;
+        }
+    }
+}

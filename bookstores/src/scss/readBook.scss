@@ -1,0 +1,212 @@
+@import '_common.scss';
+.read {
+    @include wh(100%, auto);
+    overflow-y: scroll;
+    background: $article-bg1;
+    color: $artical-color;
+    @include sizing;
+    padding: pxTorem(10px) pxTorem(12px);
+    .title {
+        @include wh(100%, pxTorem(35px));
+        font-weight: bolder;
+        font-size: pxTorem(20px);
+        margin-bottom: pxTorem(12px);
+        border-bottom: pxTorem(2px) solid $artical-color;
+        line-height: pxTorem(38px);
+    }
+    p {
+        line-height: 1.5;
+        text-indent: 2em;
+    }
+}
+
+.mask-wrap {
+    @include wh(100%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mask {
+    @include wh(100%, 100%);
+    @include flex;
+    flex-direction: column;
+    .top {
+        @include wh(100%, pxTorem(48px));
+        flex-shrink: 0;
+        background: rgba(0, 0, 0, .8);
+        @include flex;
+        @include sizing;
+        padding: 0 pxTorem(15px);
+        font-size: pxTorem(15px);
+        span.icon-circle-back {
+            @include wh(pxTorem(25px), pxTorem(25px));
+            @include bg('../../imgs/icon-circle-back.png');
+            background-size: cover;
+        }
+        span.icon-more {
+            @include wh(pxTorem(25px), pxTorem(25px));
+            @include bg('../../imgs/icon-more.png');
+            background-size: cover;
+        }
+        .detail-p {
+            flex: 1;
+            color: #fff;
+            margin-left: pxTorem(15px);
+        }
+    }
+    .middle {
+        width: 100%;
+        flex: 1;
+        background: transparent;
+    }
+    .bot {
+        @include wh(100%, auto);
+        flex-shrink: 0;
+        background: rgba(0, 0, 0, .8);
+        .chapter-btns {
+            @include wh(100%, pxTorem(48px));
+            flex-shrink: 0;
+            // background: rgba(0, 0, 0, .8);
+            @include flex;
+            @include sizing;
+            padding: 0 pxTorem(15px);
+            font-size: pxTorem(15px);
+            color: #fff;
+            border-bottom: pxTorem(1px) solid #ccc;
+        }
+        .change-btns {
+            @include wh(100%, auto);
+            flex-shrink: 0;
+            // background: rgba(0, 0, 0, .8);
+            @include flex;
+            @include sizing;
+            padding: pxTorem(8px) pxTorem(15px);
+            font-size: pxTorem(15px);
+            color: #fff;
+            dl {
+                flex: 1;
+                text-align: center;
+                color: #fff;
+                font-size: pxTorem(13px);
+                dt {
+                    @include wh(pxTorem(20px), pxTorem(15px));
+                    margin: pxTorem(5px) auto;
+                    @include bg('../../imgs/icon-chapter.png');
+                    background-size: cover;
+                }
+                &.fonts>dt {
+                    @include bg('../../imgs/icon-font.png');
+                    background-size: cover;
+                }
+                &.fonts.active>dt {
+                    @include bg('../../imgs/icon-font-active.png');
+                    background-size: cover;
+                }
+                &.day.night>dt {
+                    @include bg('../../imgs/icon-light.png');
+                    background-size: cover;
+                }
+                &.day>dt {
+                    @include bg('../../imgs/icon-night.png');
+                    background-size: cover;
+                }
+                &.download>dt {
+                    @include bg('../../imgs/icon-down.png');
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+.reminder-wrap {
+    @include wh(100%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    .reminder-inner {
+        @include wh(100%, 100%);
+        display: flex;
+        flex-direction: column;
+        .reminder-mask {
+            flex: 1;
+            width: 100%;
+            background: rgba(0, 0, 0, .3);
+        }
+        .reminder {
+            @include wh(100%, auto);
+            flex-shrink: 0;
+            text-align: center;
+            background: #fff;
+            h3 {
+                line-height: pxTorem(44px);
+                font-weight: bold;
+                font-size: pxTorem(16px);
+            }
+            p {
+                line-height: pxTorem(44px);
+                font-size: pxTorem(14px);
+            }
+            button {
+                @include wh(100%, pxTorem(44px));
+                background: skyblue;
+                color: #fff;
+                border: none;
+                font-size: pxTorem(15px);
+                outline: none;
+            }
+        }
+    }
+}
+
+.fonts-bg {
+    @include wh(100%, auto);
+    @include sizing;
+    padding: pxTorem(10px) 0;
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    bottom: pxTorem(58px);
+    z-index: 6;
+    color: #fff;
+    .set-fonts,
+    .set-bg {
+        @include wh(100%, auto);
+        @include sizing;
+        padding: pxTorem(10px) 0;
+        @include flex(flex-start);
+        b {
+            padding: 0 pxTorem(15px);
+        }
+    }
+    .set-fonts {
+        span {
+            @include wh(pxTorem(88px), pxTorem(25px));
+            text-align: center;
+            line-height: pxTorem(25px);
+            background: transparent;
+            border-radius: pxTorem(22px);
+            border: 1px solid $article-bg1;
+            margin-right: pxTorem(10px);
+        }
+    }
+    .set-bg {
+        span {
+            @include wh(pxTorem(28px), pxTorem(28px));
+            background: $article-bg1;
+            margin-right: pxTorem(10px);
+            border-radius: 50%;
+            position: relative;
+            &.active:before {
+                content: '';
+                @include wh(pxTorem(30px), pxTorem(30px));
+                position: absolute;
+                top: pxTorem(-2px);
+                left: pxTorem(-2px);
+                border-radius: 50%;
+                border: pxTorem(1px) solid orange;
+            }
+        }
+    }
+}

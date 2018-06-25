@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/libs/flexible.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span class="icon-sign"></span>
+            <div class="index-tab">
+                <em class="active">书城</em>
+                <em>书架</em>
+                <div class="line"></div>
+            </div>
+            <a href="./page/mine.html"><span class="icon-person"></span></a>
+
+        </header>
+        <main>
+            <div class="swiper-container index-wrap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="
+                        index-swiper" up="上拉加载更多……" down="下拉刷新">
+                            <div class="search-div">
+                                <a href="./page/search.html" class="search-tz">
+                                    <p class="search-p">
+                                        <span class="icon-search"></span>
+                                        <input type="text" placeholder="输入书名/作者/关键字">
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="banner-wrap block">
+                                <div class="banner">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper banner-swiper">
+                                            <script type="text/x-handlebars-template" id="banner-tpl">
+                                                {{#each data}}
+                                                <div class="swiper-slide stop-swiping">
+                                                    <img src="{{this.ad_pic_url}}" alt="">
+                                                </div>
+                                                {{/each}}
+                                            </script>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="banner-inner">
+                                    <script type="text/x-handlebars-template" id="bList-tpl">
+                                        {{#each data}}{{#unless (limit @index 2)}}
+                                        <dl>
+                                            <dt><img src="{{#split this.ad_copy}}{{/split}}" alt=""></dt>
+                                            <dd>{{this.ad_name }}
+                                            </dd>
+                                        </dl> {{/unless}}{{/each}}
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="block hotWeek">
+                                <div></div>
+                                <p class="more">查看更多</p>
+                            </div>
+                            <div class="block recommend">
+                                <h3 class="tj-com">
+                                    <p>重磅推荐<span>推</span></p><span class="choose"><em class="blue">男</em> | <em>女</em></span>
+                                </h3>
+                                <div></div>
+                                <script type="text/x-handlebars-template" id="recommend1-tpl">
+                                    <div class="tpl-lr">
+                                        {{#each data}} {{#if (limit @index 1)}}
+                                        <a href="./page/detail.html?id={{this.fiction_id}}">
+                                            <dl>
+                                                <dt><img src="{{this.cover}}" alt="">
+                                            <span class="num">{{#addIndex @index}}{{/addIndex}}</span>
+                                        <span class="finish">{{#if this.finish}}完结{{else}}连载{{/if}}</span></dt>
+                                                <dd>
+                                                    <h4 class="title">{{this.title}}</h4>
+                                                    <p class="authors">还是发挥</p>
+                                                    <p class="summary">
+                                                        {{this.summary}}
+                                                    </p>
+                                                    <ol class="tags">
+                                                        {{#each this.tags}}
+                                                        <li>{{this}}</li>
+                                                        {{/each}}
+                                                    </ol>
+                                                </dd>
+                                            </dl>
+                                        </a>
+                                        {{/if}} {{/each}}
+                                    </div>
+                                </script>
+                                <ul class="recommend-ul">
+                                    <script type="text/x-handlebars-template" id="rmd-ul-tpl">
+                                        {{#each data}}{{#notOne @index}}
+                                        <li><a href="./page/detail.html?id={{this.fiction_id}}"><span>0{{#addIndex @index}}{{/addIndex}}</span><span>{{this.title}}</span><span>{{this.authors}}</span></a></li>
+                                        {{/notOne}} {{/each}}
+                                    </script>
+                                </ul>
+                                <p class="change-com">
+                                    <span>换一换</span>
+                                    <span>查看全部</span>
+                                </p>
+                            </div>
+                            <div class="block gf-love">
+                                <h3 class="tj-com">
+                                    <p>女生最爱</p>
+                                </h3>
+                                <div></div>
+                                <p class="change-com">
+                                    <span>换一换</span>
+                                    <span>女生频道》</span>
+                                </p>
+                            </div>
+                            <div class="block bf-love">
+                                <h3 class="tj-com">
+                                    <p>男生最爱</p>
+                                </h3>
+                                <div></div>
+                                <p class="change-com">
+                                    <span>换一换</span>
+                                    <span>男生频道》</span>
+                                </p>
+                            </div>
+                            <div class="block xm">
+                                <div></div>
+                                <script type="text/x-handlebars-template" id="hotWeek1-tpl">
+                                    <div class="tpl-tb">
+                                        <h3>{{ad_name}}</h3>
+                                        <div>
+                                            {{#with data}} {{#each data}}
+                                            <a href="./page/detail.html?fiction_id={{data.fiction_id}}">
+                                                <dl>
+                                                    <dt><img src="{{data.cover}}" alt=""></dt>
+                                                    <dd>{{data.title }}
+                                                    </dd>
+                                                </dl>
+                                            </a>{{/each}} {{/with}}
+                                        </div>
+                                    </div>
+                                </script>
+                                <p class="more">更多限免佳作》</p>
+                            </div>
+                            <div class="block jx">
+                                <h3 class="tj-com">
+                                    <p>精选专题<span>推</span></p>
+                                </h3>
+                                <div></div>
+                                <script type="text/x-handlebars-template" id="jx-tpl">
+                                    {{#each data}}
+                                    <img src="{{this.ad_pic_url}}" alt=""> {{/each}}
+                                </script>
+                                <p class="more">更多精彩专题》</p>
+                            </div>
+                            <div class="loadMore"></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide2">
+                        <div class="search-div">
+                            <a href="./page/search.html" class="search-tz">
+                                <p class="search-p">
+                                    <span class="icon-search"></span>
+                                    <input type="text" placeholder="输入书名/作者/关键字">
+                                </p>
+                            </a>
+                            <em><span class="icon-switch"></span></em>
+                        </div>
+
+                        <div class="slide2-cont"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    </div>
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(['./js/main'], function() {
+            require(['index']);
+        })
+    </script>
+</body>
+
+</html>
