@@ -1,0 +1,33 @@
+<div class="swiper-container banner swiper-no-swiping">
+    <ul class="swiper-wrapper">
+        {{#each data}}
+        <li class="swiper-slide">
+            <a href="javascript:;"><img src="{{ad_pic_url}}" title="{{ad_name}}"></a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<!--本周最火-->
+<div class="bolck-list week-hot"></div>
+<!--重磅推荐-->
+<div class="recommend-list">
+    <h2>重磅推荐</h2>
+    <div class="recommend-cont"></div>
+    <button class="change-btn" data-id="0" data="2">换一换</button>
+</div>
+<!--女生最爱-->
+<div class="gril-love">
+    <h2>女生最爱</h2>
+    <div class="gril-cont"></div>
+    <button class="change-btn" data-id="0" data="3">换一换</button><button>女生频道</button>
+</div>
+<!--男生最爱-->
+<div class="boy-love">
+    <h2>男生最爱</h2>
+    <div class="boy-cont"></div>
+    <button class="change-btn" data-id="0" data="4">换一换</button><button>男生频道</button>
+</div>
+<!--限时免费-->
+<div class="bolck-list time-free"></div>
+<!--精选专题-->
+<div class="sift-list"></div>

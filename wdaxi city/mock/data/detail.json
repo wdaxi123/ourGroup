@@ -1,0 +1,154 @@
+{
+    "comment": {
+        "top_comment": [{
+            "status": 0,
+            "author_nick": "凡人",
+            "author": 183550051,
+            "author_icon": "https://s1.mi-img.com/mfsv2/avatar/s010/p01W7hcpn3x9/8GRSZ9rLHv0koV.jpg",
+            "title": "着迷",
+            "comment_count": 2,
+            "object_id": 1724032,
+            "content": "刨去鬼怪的部分，有点鲁迅的感觉，人物扭曲的人性隔着屏幕都感觉到",
+            "rate": 5,
+            "like_count": 74,
+            "create_time": 1469600334,
+            "type": 0,
+            "id": 3039697
+        }],
+        "top_comment_count": 4,
+        "all_comment_count": 607
+    },
+    "stats": {
+        "paid": 28808
+    },
+    "author_books": [{
+        "ad": 0,
+        "word_count": 1445338,
+        "owner": 0,
+        "allow_discount": false,
+        "ad_time": 0,
+        "ad_duration": 0,
+        "free_chapter": false,
+        "score_count": 10086,
+        "copyright": "",
+        "title": "盗墓笔记",
+        "new_tags": [
+            "盗墓",
+            "热血"
+        ],
+        "on_sale": true,
+        "comment_count": 6692,
+        "has_ad": 0,
+        "click": 45114927,
+        "latest_id": 686,
+        "score": 8.99,
+        "allow_free_read": 1,
+        "rights_id": 10080,
+        "channel": [
+            1
+        ],
+        "updated": 1527155961,
+        "finish": true,
+        "rec_words": "七星疑棺，青眼狐尸，九头蛇柏。悬念重重...这神秘的墓主人到底是谁？",
+        "tags": [
+            "盗墓",
+            "风水",
+            "闷油瓶",
+            "三叔",
+            "僵尸",
+            "灵异悬疑",
+            "盗墓探险",
+            "灵异",
+            "悬疑探险"
+        ],
+        "price": 5,
+        "qrc_words": "扫码看原著，剧情更精彩",
+        "chapter_count": 483,
+        "authors": "南派三叔",
+        "categories": [{
+                "category_id": 50000,
+                "label": "灵异悬疑"
+            },
+            {
+                "category_id": 50400,
+                "label": "盗墓探险"
+            },
+            {
+                "category_id": 8000000,
+                "label": "灵异"
+            },
+            {
+                "category_id": 8000300,
+                "label": "悬疑探险"
+            }
+        ],
+        "rights": "阅文集团旗下起点中文网",
+        "level": 0,
+        "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01BQHV7XYuB/XAB2vUpv39BEvb.jpg",
+        "summary": "这神秘的墓主人到底是谁，他们到底能不能找到真正的棺椁？",
+        "fiction_id": 270635,
+        "outer_id": "22211356000824002",
+        "latest": "《后记》下"
+    }],
+    "item": {
+        "ad": 0,
+        "word_count": 110292,
+        "owner": 0,
+        "allow_discount": false,
+        "ad_time": 0,
+        "ad_duration": 0,
+        "click": 10854323,
+        "free_chapter": false,
+        "score_count": 1150,
+        "rights": "阅文集团旗下起点中文网",
+        "copyright": "",
+        "title": "老九门",
+        "on_sale": true,
+        "comment_count": 607,
+        "has_ad": 0,
+        "id": 1724032,
+        "content": "民国时期，长沙车站开来一辆来历不明的火车，彻查发现来自一座深山中的百年矿山，因为常年开采导致地皮塌陷，矿山中弥漫着一股奇怪的浓雾，长沙老九门盗墓家族张家和红家经过了一番查探，发现了深埋矿山之下，有着另外一个秘密，经过一番探险，他们深入矿山之中，来到矿山的底部，看到了让人无法置信的景象。千年之前坠落的三颗陨石，长白山下埋藏的秘密，他们到底从矿山底部带出了什么东西，为何世界慢慢变的异样诡异？",
+        "source": 2,
+        "latest_id": 76,
+        "score": 8.07,
+        "allow_free_read": 1,
+        "toc": [],
+        "rights_id": 10080,
+        "channel": [
+            1
+        ],
+        "updated": 1483690215,
+        "finish": false,
+        "rec_words": "盗墓笔记前传老九门",
+        "tags": [
+            "寻墓探险",
+            "悬疑探险",
+            "灵异"
+        ],
+        "started": 1469168519,
+        "price": 5,
+        "qrc_words": "扫码读原著，精彩抢先看！",
+        "chapter_count": 66,
+        "authors": "南派三叔",
+        "categories": [{
+                "category_id": 8000000,
+                "label": "灵异"
+            },
+            {
+                "category_id": 8000300,
+                "label": "悬疑探险"
+            }
+        ],
+        "author_books_total": 2,
+        "level": 0,
+        "created": 1469173937,
+        "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01TQfpyV6px/06EirDzmjj8zuK.jpg",
+        "summary": "【陈伟霆、张艺兴、赵丽颖主演，同名电视剧正在热播】民国时期，长沙车站开来一辆来历不明的火车，彻查发现",
+        "source_id": 323725,
+        "fiction_id": 323725,
+        "outer_id": "4757330804346503",
+        "latest": "第三十一章 惨胜"
+    },
+    "ips": [],
+    "result": 0
+}

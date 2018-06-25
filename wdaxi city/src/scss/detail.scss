@@ -1,0 +1,288 @@
+@import "tpl/_common.scss";
+@import "tpl/_config.scss";
+@import "tpl/_mixin.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    header {
+        height: pxTorem(44px);
+        background: #efeff0;
+        border-bottom: 1px solid #ddd;
+        padding-left: pxTorem(44px);
+        padding-right: pxTorem(44px);
+        position: relative;
+        .top_back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            &::before {
+                content: '';
+                display: block;
+                margin: pxTorem(15px) 0 0 pxTorem(16px);
+                width: pxTorem(30px);
+                height: pxTorem(30px);
+                background: url(http://dushu.xiaomi.com/x0D0GrWs.png) no-repeat;
+                background-size: pxTorem(16px) pxTorem(16px);
+            }
+        }
+        h4 {
+            flex: 1;
+            line-height: pxTorem(44px);
+            font-size: pxTorem(18px)
+        }
+        .home {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            &::before {
+                content: '';
+                display: block;
+                margin: pxTorem(15px) 0 0 pxTorem(16px);
+                width: pxTorem(30px);
+                height: pxTorem(30px);
+                background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01eZH42sBV7/QTS90E2ZVritaa.png) no-repeat;
+                background-size: pxTorem(20px) pxTorem(20px);
+            }
+        }
+    }
+    .inner-content {
+        flex: 1;
+        overflow: hidden;
+        overflow-y: auto;
+        .type-tags {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                padding: pxTorem(5px) pxTorem(20px);
+                border: 1px solid #ccc;
+                margin: pxTorem(10px);
+                text-align: center;
+                font-size: pxTorem(16px);
+                border-radius: pxTorem(10px);
+                background: palegreen
+            }
+            li:nth-child(3n) {
+                background: salmon;
+            }
+            li:nth-child(2n) {
+                background: khaki;
+            }
+        }
+        .shlf-list {
+            width: 100%;
+            height: 100%;
+            >p {
+                width: 100%;
+                padding: pxTorem(10px) 0;
+                font-size: pxTorem(18px);
+                text-align: center;
+                color: #999;
+            }
+            >li {
+                width: 100%;
+                border: 1px solid #ccc;
+                dl {
+                    width: 100%;
+                    display: flex;
+                    padding: pxTorem(10px);
+                    align-items: inherit;
+                    dt {
+                        width: 30%;
+                        padding: 5px;
+                        img {
+                            width: 100%;
+                            height: pxTorem(150px);
+                            display: block;
+                        }
+                    }
+                    dd {
+                        flex: 1;
+                        width: 100%;
+                        padding: pxTorem(5px);
+                        h4 {
+                            padding: pxTorem(5px);
+                            line-height: pxTorem(20px);
+                            font-size: pxTorem(18px);
+                        }
+                        p {
+                            padding: pxTorem(5px);
+                            font-size: pxTorem(16px);
+                        }
+                        span {
+                            color: #999;
+                            font-size: pxTorem(14px);
+                            padding: pxTorem(5px);
+                        }
+                    }
+                }
+            }
+        }
+        .detail {
+            width: 100%;
+            >dl {
+                width: 100%;
+                padding: pxTorem(20px); // height: pxTorem(300px);
+                display: flex;
+                justify-content: space-around;
+                dt {
+                    width: 40%;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                dd {
+                    flex: 1;
+                    display: block;
+                    padding: 0 pxTorem(10px);
+                    h4 {
+                        font-size: pxTorem(18px);
+                        padding: pxTorem(14px) 0;
+                    }
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        b {
+                            color: darkblue;
+                            font-size: pxTorem(16px);
+                            padding: pxTorem(8px) 0;
+                        }
+                        >span {
+                            font-size: pxTorem(16px);
+                            padding: pxTorem(8px) 0;
+                        }
+                        >p {
+                            font-size: pxTorem(16px);
+                            padding: pxTorem(8px) 0;
+                            line-height: pxTorem(20px);
+                            >span {
+                                border: 1px solid green;
+                                color: green;
+                                padding: pxTorem(2px) pxTorem(4px);
+                                margin-left: pxTorem(6px);
+                                border-radius: pxTorem(6px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .Btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            >button {
+                display: block;
+                width: 45%;
+                padding: pxTorem(10px) 0;
+                font-size: pxTorem(18px);
+                text-align: center;
+                border: none;
+                border: 1px solid #999;
+                border-radius: pxTorem(8px);
+            }
+            .read {
+                background: orangered;
+                color: #fff;
+            }
+            .download {
+                background: #fff;
+                color: #999;
+            }
+        }
+        .detail-con {
+            width: 100%;
+            height: pxTorem(105px);
+            overflow: hidden;
+            margin: pxTorem(10px) 0;
+            box-sizing: border-box;
+            padding: pxTorem(5px);
+            >p {
+                font-size: pxTorem(16px);
+                height: 100%;
+                text-indent: pxTorem(32px);
+            }
+        }
+        .on {
+            height: pxTorem(190px);
+        }
+        .New {
+            padding: pxTorem(6px) 0;
+            border-top: pxTorem(1px) solid #ccc;
+            p {
+                text-align: center;
+                color: #666;
+                font-size: pxTorem(16px);
+            }
+        }
+        .background {
+            width: 100%;
+            height: pxTorem(10px);
+            background: $header-bg;
+        }
+        .Type {
+            width: 100%;
+            padding: pxTorem(10px) 0;
+            h4 {
+                //padding: pxTorem(5px);
+                font-size: pxTorem(16px);
+                text-indent: pxTorem(15px);
+                color: #666;
+            }
+            .type {
+                display: flex;
+                flex-wrap: wrap;
+                span {
+                    padding: pxTorem(5px) pxTorem(20px);
+                    border: 1px solid #ccc;
+                    margin: pxTorem(10px);
+                    text-align: center;
+                    font-size: pxTorem(16px);
+                    border-radius: pxTorem(6px);
+                    background: palegreen;
+                }
+                span:nth-child(3n) {
+                    background: salmon;
+                }
+            }
+        }
+        .others,
+        .infromation {
+            width: 100%;
+            padding: pxTorem(10px) 0;
+            p {
+                font-size: pxTorem(16px);
+                text-indent: pxTorem(15px);
+                color: #666;
+            }
+            h4,
+            h5 {
+                font-size: pxTorem(16px);
+                text-indent: pxTorem(15px);
+                color: #666;
+            }
+            .others-con {
+                // display: flex;
+                // justify-content: space-around;
+                dl {
+                    width: 30%;
+                    padding: pxTorem(10px);
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                h5 {
+                    font-size: pxTorem(14px);
+                }
+            }
+        }
+    }
+}

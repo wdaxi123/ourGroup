@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href='../scss/reading.css'>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+
+        </div>
+        <script id="content" type='text/x-handlebars-complate'>
+            <h3>{{t}}</h3>
+            <ul>
+                {{#each p}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </script>
+        <ul class="nav none">
+            <header>
+                <a href="../index.html">返回</a>
+            </header>
+            <footer>
+                <div class="top">
+                    <span class="prev"> 上一张</span>
+                    <span class="middle"> <b>1</b>/<em>总</em> </span>
+                    <span class="next"> 下一张</span>
+                </div>
+                <ul class="bottom">
+                    <li>目录</li>
+                    <li>嗷嗷</li>
+                    <li>夜间</li>
+                    <li>下载</li>
+                </ul>
+            </footer>
+    </div>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['reading'])
+        })
+    </script>
+</body>
+
+</html>

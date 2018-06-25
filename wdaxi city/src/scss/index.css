@@ -1,0 +1,792 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: pxTorem(16px);
+}
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.wrap header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.17333rem;
+  border-bottom: 1px solid #ddd;
+  background: #efeff0;
+}
+
+.wrap header .header {
+  width: 100%;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap header .header > span {
+  flex: 1;
+  text-align: center;
+  color: #333;
+  font-size: 0.42667rem;
+}
+
+.wrap header .header .active {
+  color: #ff6600;
+}
+
+.wrap header .header .active::after {
+  content: '';
+  width: 0.93333rem;
+  height: 0.02667rem;
+  display: block;
+  margin: 0 auto;
+  background: #777;
+}
+
+.wrap header .sign_in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+  background: url(http://image.read.duokan.com/mfsv2/download/s010/p01O5K5DzsAZ/2ZODzjwkRQh7l3.png) center no-repeat;
+  background-size: 50%;
+}
+
+.wrap header .login {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 1.17333rem;
+  height: 1.17333rem;
+  background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01j041d5DOT/boUg2EJlVetOMC.png) no-repeat center;
+  background-size: 50%;
+}
+
+.wrap main {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrap main .tab-content {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap main .tab-content .swiper-slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.serch_btn {
+  width: 95%;
+  margin: 0.26667rem auto;
+  box-sizing: border-box;
+  padding: 0 0.26667rem;
+}
+
+.serch_btn .tab-hander {
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.serch_btn .tab-hander .search {
+  display: block;
+  width: 1.17333rem;
+  height: 1.17333rem;
+  background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01dSYLeWtSR/tY73MgTfVw7UAS.png) no-repeat 10px center;
+  background-size: 50%;
+}
+
+.serch_btn .tab-hander input {
+  flex: 1;
+  font-size: 0.42667rem;
+}
+
+.right {
+  box-sizing: border-box;
+  padding-right: 1.6rem;
+}
+
+.right > span {
+  position: absolute;
+  right: 0.26667rem;
+  top: 0.26667rem;
+  width: 1.17333rem;
+  height: 1.17333rem;
+  float: right;
+  border-radius: 4px;
+  background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p014nDc0lHYW/lDeZ3lL4nmgnmf.png) no-repeat center;
+  background-size: 60%;
+  border: 1px solid #eee;
+}
+
+.right .btn-switch {
+  background-image: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01yLF3fEj8l/b7UfAdlfufQKML.png);
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner .banner-list {
+  width: 100%;
+}
+
+.banner .banner-list > .swiper-slide {
+  width: 100%;
+}
+
+.banner .banner-list > .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+}
+
+.nav li {
+  width: 20%;
+  padding: 0.26667rem 0;
+}
+
+.nav li img {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav li span {
+  font-size: 0.37333rem;
+  display: block;
+  text-align: center;
+  padding: 0.13333rem 0;
+}
+
+.backG {
+  width: 100%;
+  height: 0.26667rem;
+  background: #f5f5f5;
+}
+
+.weekHot,
+.time {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.26667rem;
+}
+
+.weekHot h4,
+.time h4 {
+  padding: 0.13333rem;
+  border-left: #ff6600 5px solid;
+  font-size: 0.42667rem;
+}
+
+.weekHot .weekList,
+.time .weekList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weekHot .weekList li,
+.time .weekList li {
+  width: 30%;
+  margin: 0.13333rem;
+}
+
+.weekHot .weekList li img,
+.time .weekList li img {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+.weekHot .weekList li span,
+.time .weekList li span {
+  display: block;
+  font-size: 0.37333rem;
+  text-align: center;
+  padding: 0.13333rem 0;
+}
+
+.weekHot > p,
+.time > p {
+  padding: 0.26667rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  border-top: 2px solid #ccc;
+}
+
+.recommend,
+.girl,
+.boy,
+.inner {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.26667rem;
+}
+
+.recommend h4,
+.girl h4,
+.boy h4,
+.inner h4 {
+  padding: 0.13333rem;
+  border-left: #ff6600 5px solid;
+  font-size: 0.42667rem;
+}
+
+.recommend .recommendkList li,
+.recommend .girlList li,
+.girl .recommendkList li,
+.girl .girlList li,
+.boy .recommendkList li,
+.boy .girlList li,
+.inner .recommendkList li,
+.inner .girlList li {
+  padding: 0.26667rem 0;
+}
+
+.recommend .recommendkList li dl,
+.recommend .girlList li dl,
+.girl .recommendkList li dl,
+.girl .girlList li dl,
+.boy .recommendkList li dl,
+.boy .girlList li dl,
+.inner .recommendkList li dl,
+.inner .girlList li dl {
+  width: 100%;
+  display: flex;
+}
+
+.recommend .recommendkList li dl dt,
+.recommend .girlList li dl dt,
+.girl .recommendkList li dl dt,
+.girl .girlList li dl dt,
+.boy .recommendkList li dl dt,
+.boy .girlList li dl dt,
+.inner .recommendkList li dl dt,
+.inner .girlList li dl dt {
+  width: 35%;
+}
+
+.recommend .recommendkList li dl dt img,
+.recommend .girlList li dl dt img,
+.girl .recommendkList li dl dt img,
+.girl .girlList li dl dt img,
+.boy .recommendkList li dl dt img,
+.boy .girlList li dl dt img,
+.inner .recommendkList li dl dt img,
+.inner .girlList li dl dt img {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+.recommend .recommendkList li dl dd,
+.recommend .girlList li dl dd,
+.girl .recommendkList li dl dd,
+.girl .girlList li dl dd,
+.boy .recommendkList li dl dd,
+.boy .girlList li dl dd,
+.inner .recommendkList li dl dd,
+.inner .girlList li dl dd {
+  padding-left: 0.26667rem;
+  width: 65%;
+}
+
+.recommend .recommendkList li dl dd h6,
+.recommend .girlList li dl dd h6,
+.girl .recommendkList li dl dd h6,
+.girl .girlList li dl dd h6,
+.boy .recommendkList li dl dd h6,
+.boy .girlList li dl dd h6,
+.inner .recommendkList li dl dd h6,
+.inner .girlList li dl dd h6 {
+  line-height: 0.8rem;
+  font-size: 0.42667rem;
+}
+
+.recommend .recommendkList li dl dd span,
+.recommend .girlList li dl dd span,
+.girl .recommendkList li dl dd span,
+.girl .girlList li dl dd span,
+.boy .recommendkList li dl dd span,
+.boy .girlList li dl dd span,
+.inner .recommendkList li dl dd span,
+.inner .girlList li dl dd span {
+  line-height: 0.8rem;
+  font-size: 0.37333rem;
+}
+
+.recommend .recommendkList li dl dd p,
+.recommend .girlList li dl dd p,
+.girl .recommendkList li dl dd p,
+.girl .girlList li dl dd p,
+.boy .recommendkList li dl dd p,
+.boy .girlList li dl dd p,
+.inner .recommendkList li dl dd p,
+.inner .girlList li dl dd p {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 0.69333rem;
+  font-size: 0.37333rem;
+}
+
+.recommend .recommendkList li dl dd ul,
+.recommend .girlList li dl dd ul,
+.girl .recommendkList li dl dd ul,
+.girl .girlList li dl dd ul,
+.boy .recommendkList li dl dd ul,
+.boy .girlList li dl dd ul,
+.inner .recommendkList li dl dd ul,
+.inner .girlList li dl dd ul {
+  display: flex;
+}
+
+.recommend .recommendkList li dl dd ul li span,
+.recommend .girlList li dl dd ul li span,
+.girl .recommendkList li dl dd ul li span,
+.girl .girlList li dl dd ul li span,
+.boy .recommendkList li dl dd ul li span,
+.boy .girlList li dl dd ul li span,
+.inner .recommendkList li dl dd ul li span,
+.inner .girlList li dl dd ul li span {
+  font-size: 0.32rem;
+  border: 1px solid #53ac7d;
+  border-radius: 0.13333rem;
+  flex-shrink: 0;
+  padding: 0.13333rem 0.05333rem;
+  margin: 0 0.02667rem;
+}
+
+.recommend .recommendkList li > b,
+.recommend .girlList li > b,
+.girl .recommendkList li > b,
+.girl .girlList li > b,
+.boy .recommendkList li > b,
+.boy .girlList li > b,
+.inner .recommendkList li > b,
+.inner .girlList li > b {
+  color: #ff6600;
+  font-size: 0.42667rem;
+  font-weight: 600;
+  padding-right: 0.26667rem;
+}
+
+.recommend .recommendkList li > span,
+.recommend .girlList li > span,
+.girl .recommendkList li > span,
+.girl .girlList li > span,
+.boy .recommendkList li > span,
+.boy .girlList li > span,
+.inner .recommendkList li > span,
+.inner .girlList li > span {
+  font-size: 0.42667rem;
+  text-indent: 0.26667rem;
+}
+
+.recommend .recommendkList li > em,
+.recommend .girlList li > em,
+.girl .recommendkList li > em,
+.girl .girlList li > em,
+.boy .recommendkList li > em,
+.boy .girlList li > em,
+.inner .recommendkList li > em,
+.inner .girlList li > em {
+  padding-left: 0.66667rem;
+  color: #777;
+}
+
+.recommend > p,
+.girl > p,
+.boy > p,
+.inner > p {
+  display: flex;
+  justify-content: space-between;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  border-top: 2px solid #ccc;
+}
+
+.recommend > p > span,
+.girl > p > span,
+.boy > p > span,
+.inner > p > span {
+  text-align: center;
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+
+.recommend > p > span:first-child,
+.girl > p > span:first-child,
+.boy > p > span:first-child,
+.inner > p > span:first-child {
+  border-right: 2px solid #ccc;
+}
+
+.theme {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.26667rem;
+}
+
+.theme h4 {
+  padding: 0.13333rem;
+  border-left: #ff6600 5px solid;
+  font-size: 0.42667rem;
+}
+
+.theme > .weekList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.theme > .weekList li {
+  width: 47%;
+  margin: 0.13333rem;
+}
+
+.theme > .weekList li img {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+.theme > .weekList li span {
+  display: block;
+  font-size: 0.37333rem;
+  text-align: center;
+  padding: 0.13333rem 0;
+}
+
+.theme > p {
+  padding: 0.26667rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  border-top: 2px solid #ccc;
+}
+
+.up {
+  width: 100%;
+}
+
+.up .inner {
+  width: 100%;
+}
+
+.up .load {
+  width: 100%;
+  padding: 0.26667rem;
+  text-align: center;
+  font-size: 0.42667rem;
+}
+
+.right-list li {
+  padding: 0.26667rem 0;
+}
+
+.right-list li dl {
+  width: 100%;
+  display: flex;
+}
+
+.right-list li dl dt {
+  width: 35%;
+}
+
+.right-list li dl dt img {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+.right-list li dl dd {
+  padding-left: 0.26667rem;
+  width: 65%;
+}
+
+.right-list li dl dd h6 {
+  line-height: 0.8rem;
+  font-size: 0.42667rem;
+}
+
+.right-list li dl dd span {
+  line-height: 0.8rem;
+  font-size: 0.37333rem;
+}
+
+.right-list li dl dd p {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 0.8rem;
+  font-size: 0.37333rem;
+}
+
+.right-shelf {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right-shelf li {
+  width: 30%;
+  margin: 0.13333rem;
+}
+
+.right-shelf li > dl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.right-shelf li > dl dt {
+  width: 100%;
+}
+
+.right-shelf li > dl dt img {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+.right-shelf li > dl dd span,
+.right-shelf li > dl dd p {
+  display: block;
+  display: none;
+}
+
+.right-shelf li > dl dd h6 {
+  font-size: 0.42667rem;
+  text-align: center;
+  padding: 0.13333rem 0;
+}
+/*# sourceMappingURL=index.css.map */

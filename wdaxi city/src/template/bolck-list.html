@@ -1,0 +1,11 @@
+<h2>{{ad_name}}</h2>
+<div>
+    {{#each data.data}}
+    <a href="page/detail.html?id={{fiction_id}}">
+        <dl>
+            <dt><img src="{{cover}}"></dt>
+            <dd>{{title}}</dd>
+        </dl>
+    </a>
+    {{/each}}
+</div>

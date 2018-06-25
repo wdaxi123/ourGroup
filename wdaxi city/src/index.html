@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/swiper.min.css">
+    <link rel="stylesheet" href="scss/index.css">
+    <script src="js/libs/require.js"></script>
+    <script>
+        require(['js/main'], function() {
+            require(['index'])
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a href="#" class="sign_in"></a>
+            <div class="header">
+                <span class="active">书城</span>
+                <span>书架</span>
+            </div>
+            <a href="#" class="login"></a>
+        </header>
+        <main>
+            <!-- tab切换 -->
+            <div class="swiper-container tab-content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide scroll">
+                        <div>
+                            <!-- 搜索框 -->
+                            <div class="serch_btn" onclick="location.href='./page/search.html'">
+                                <a href="#" class="tab-hander">
+                                    <span class="search">
+                                </span>
+                                    <input type="text" class="inner" placeholder="输入书名/作者/关键字">
+                                </a>
+
+                            </div>
+                            <!-- 轮播图  渲染-->
+                            <div class="swiper-container banner">
+                                <div class="swiper-wrapper banner-list">
+                                </div>
+                                <script id="banner-list" type="text/x-handlebars-template">
+                                    {{#each this}}
+                                    <div class="swiper-slide">
+                                        <img src="{{ad_pic_url}}" alt="" data-id='{{id}}'>
+                                    </div>
+                                    {{/each}}
+                                </script>
+                            </div>
+                            <!-- 导航列表  渲染-->
+                            <ul class="nav">
+                            </ul>
+                            <script id="nav" type="text/x-handlebars-template">
+                                {{#each this}}
+                                <li>
+                                    <img src="{{ad_copy}}" alt="" data-id='{{id}}'>
+                                    <span>{{ad_name}}</span>
+                                </li>
+                                {{/each}}
+                            </script>
+                            <!-- 灰色背景边框 -->
+                            <div class="backG">
+                            </div>
+                            <!-- 渲染数据列表 -->
+
+                            <!-- 1. 本周最火 -->
+                            <div class="weekHot">
+                            </div>
+                            <script id="weekHot" type="text/x-handlebars-template">
+                                <h4>{{ad_name}}</h4>
+                                <ol class="weekList">
+                                    {{#each data.data}}
+                                    <li>
+                                        <a href="./page/detail.html?bookId={{fiction_id}}"><img src="{{cover}}" alt=""></a>
+                                        <span>{{title}}</span>
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                                <p>查看更多</p>
+                                <div class="backG">
+                                </div>
+                            </script>
+
+                            <!-- 2.重磅推荐 -->
+                            <div class="recommend">
+                            </div>
+                            <script id="recommend" type="text/x-handlebars-template">
+                                <h4>{{ad_name}}</h4>
+                                <ol class="recommendkList">
+                                    {{#each data.data}}{{#limit @index 5}}{{#first @index 0}}
+                                    <li>
+                                        <dl>
+                                            <dt><img src="{{cover}}" alt=""></dt>
+                                            <dd>
+                                                <h6>{{title}}</h6>
+                                                <span>{{authors}}</span>
+                                                <p>{{summary}}</p>
+                                                <ul>
+                                                    {{#each tags}} {{#limit @index 2}}
+                                                    <li><span>{{this}}</span></li> {{/limit}}{{/each}}
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>{{/first}}
+                                    <li>
+                                        <b>{{#num @index}}{{/num}}</b><span>{{title}}</span><em>{{authors}}</em>
+                                    </li>
+                                    {{/limit}} {{/each}}
+                                </ol>
+                                <p><span class="change-btn">换一换</span><span>查看全部</span></p>
+                                <div class="backG">
+                                </div>
+                            </script>
+
+                            <!-- 女生最爱 -->
+                            <div class="girl"></div>
+                            <script id="girl" type="text/x-handlebars-template">
+                                <h4>{{ad_name}}</h4>
+                                <ol class="girlList">
+                                    {{#each data.data}}{{#limit @index 5}}
+                                    <li>
+                                        <dl>
+                                            <dt><img src="{{cover}}" alt=""></dt>
+                                            <dd>
+                                                <h6>{{title}}</h6>
+                                                <span>{{authors}}</span>
+                                                <p>{{summary}}</p>
+                                                <ul>
+                                                    {{#each tags}}{{#limit @index 2}}
+                                                    <li><span>{{this}}</span></li> {{/limit}} {{/each}}
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    {{/limit}} {{/each}}
+                                </ol>
+                                <p><span class="change-btn">换一换</span><span>女生频道>></span></p>
+                                <div class="backG">
+                                </div>
+                            </script>
+
+                            <!-- 男生最爱 -->
+                            <div class="boy"></div>
+                            <script id="boy" type="text/x-handlebars-template">
+                                <h4>{{ad_name}}</h4>
+                                <ol class="girlList">
+                                    {{#each data.data}}{{#limit @index 5}}
+                                    <li>
+                                        <dl>
+                                            <dt><img src="{{cover}}" alt=""></dt>
+                                            <dd>
+                                                <h6>{{title}}</h6>
+                                                <span>{{authors}}</span>
+                                                <p>{{summary}}</p>
+                                                <ul>
+                                                    {{#each tags}}{{#limit @index 2}}
+                                                    <li><span>{{this}}</span></li> {{/limit}} {{/each}}
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    {{/limit}} {{/each}}
+                                </ol>
+                                <p><span class="change-btn">换一换</span><span>男生频道>></span></p>
+                                <div class="backG">
+                                </div>
+                            </script>
+
+                            <!-- 限时免费 -->
+                            <div class="time ">
+                            </div>
+                            <script id="time" type="text/x-handlebars-template">
+                                <h4>{{ad_name}}</h4>
+                                <ol class="weekList">
+                                    {{#each data.data}}
+                                    <li>
+                                        <img src="{{this.data.cover}}" alt="">
+                                        <span>{{this.ad_name}}</span>
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                                <p>更多限免佳作>></p>
+                                <div class="backG">
+                                </div>
+                            </script>
+                            <!-- 精选专题 -->
+                            <div class="theme">
+                            </div>
+                            <script id="theme" type="text/x-handlebars-template">
+                                <h4>{{ad_name}}</h4>
+                                <ol class="weekList">
+                                    {{#each data.data}}
+                                    <li>
+                                        <img src="{{this.ad_pic_url}}" alt="">
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                                <p>更多精彩专题>></p>
+                                <div class="backG">
+                                </div>
+                            </script>
+                            <div class="up">
+                                <div class="inner"></div>
+                                <script id="inner" type="text/x-handlebars-template">
+                                    <ol class="girlList">
+                                        {{#each this}}
+                                        <li>
+                                            <dl>
+                                                <dt><img src="{{cover}}" alt=""></dt>
+                                                <dd>
+                                                    <h6>{{title}}</h6>
+                                                    <span>{{authors}}</span>
+                                                    <p>{{summary}}</p>
+                                                    <ul>
+                                                        {{#each tags}}{{#limit @index 2}}
+                                                        <li><span>{{this}}</span></li> {{/limit}} {{/each}}
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        {{/each}}
+                                    </ol>
+                                    <p><span class="change-btn">换一换</span><span>男生频道>></span></p>
+                                    <div class="backG">
+                                    </div>
+                                </script>
+                                <div class="load" data-inner='已无数据.....'>
+                                    上拉加载更多>>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="serch_btn right">
+                            <a href="#" class="tab-hander" onclick="location.href='./page/search.html'">
+                                <span class="search">
+                                 </span>
+                                <input type="text" class="inner" placeholder="输入书名/作者/关键字">
+                            </a>
+                            <span>
+                            </span>
+                        </div>
+                        <ul class="right-list ">
+                        </ul>
+                        <script id="right-list" type="text/x-handlebars-template">
+                            {{#each data.data}}
+                            <li>
+                                <dl>
+                                    <dt><img src="{{this.cover}}" alt=""></dt>
+                                    <dd>
+                                        <h6>{{title}}</h6>
+                                        <span>{{authors}}</span>
+                                        <p>{{summary}}</p>
+                                    </dd>
+                                </dl>
+                            </li>
+                            {{/each}}
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

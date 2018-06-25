@@ -1,0 +1,556 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: pxTorem(16px);
+}
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.wrap header {
+  height: 1.17333rem;
+  background: #efeff0;
+  border-bottom: 1px solid #ddd;
+  padding-left: 1.17333rem;
+  padding-right: 1.17333rem;
+  position: relative;
+}
+
+.wrap header .top_back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+.wrap header .top_back::before {
+  content: '';
+  display: block;
+  margin: 0.4rem 0 0 0.42667rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(http://dushu.xiaomi.com/x0D0GrWs.png) no-repeat;
+  background-size: 0.42667rem 0.42667rem;
+}
+
+.wrap header h4 {
+  flex: 1;
+  line-height: 1.17333rem;
+  font-size: 0.48rem;
+}
+
+.wrap header .home {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+.wrap header .home::before {
+  content: '';
+  display: block;
+  margin: 0.4rem 0 0 0.42667rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01eZH42sBV7/QTS90E2ZVritaa.png) no-repeat;
+  background-size: 0.53333rem 0.53333rem;
+}
+
+.wrap .inner-content {
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.wrap .inner-content .type-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrap .inner-content .type-tags li {
+  padding: 0.13333rem 0.53333rem;
+  border: 1px solid #ccc;
+  margin: 0.26667rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  border-radius: 0.26667rem;
+  background: palegreen;
+}
+
+.wrap .inner-content .type-tags li:nth-child(3n) {
+  background: salmon;
+}
+
+.wrap .inner-content .type-tags li:nth-child(2n) {
+  background: khaki;
+}
+
+.wrap .inner-content .shlf-list {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .inner-content .shlf-list > p {
+  width: 100%;
+  padding: 0.26667rem 0;
+  font-size: 0.48rem;
+  text-align: center;
+  color: #999;
+}
+
+.wrap .inner-content .shlf-list > li {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.wrap .inner-content .shlf-list > li dl {
+  width: 100%;
+  display: flex;
+  padding: 0.26667rem;
+  align-items: inherit;
+}
+
+.wrap .inner-content .shlf-list > li dl dt {
+  width: 30%;
+  padding: 5px;
+}
+
+.wrap .inner-content .shlf-list > li dl dt img {
+  width: 100%;
+  height: 4rem;
+  display: block;
+}
+
+.wrap .inner-content .shlf-list > li dl dd {
+  flex: 1;
+  width: 100%;
+  padding: 0.13333rem;
+}
+
+.wrap .inner-content .shlf-list > li dl dd h4 {
+  padding: 0.13333rem;
+  line-height: 0.53333rem;
+  font-size: 0.48rem;
+}
+
+.wrap .inner-content .shlf-list > li dl dd p {
+  padding: 0.13333rem;
+  font-size: 0.42667rem;
+}
+
+.wrap .inner-content .shlf-list > li dl dd span {
+  color: #999;
+  font-size: 0.37333rem;
+  padding: 0.13333rem;
+}
+
+.wrap .inner-content .detail {
+  width: 100%;
+}
+
+.wrap .inner-content .detail > dl {
+  width: 100%;
+  padding: 0.53333rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrap .inner-content .detail > dl dt {
+  width: 40%;
+}
+
+.wrap .inner-content .detail > dl dt img {
+  display: block;
+  width: 100%;
+}
+
+.wrap .inner-content .detail > dl dd {
+  flex: 1;
+  display: block;
+  padding: 0 0.26667rem;
+}
+
+.wrap .inner-content .detail > dl dd h4 {
+  font-size: 0.48rem;
+  padding: 0.37333rem 0;
+}
+
+.wrap .inner-content .detail > dl dd > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap .inner-content .detail > dl dd > div b {
+  color: darkblue;
+  font-size: 0.42667rem;
+  padding: 0.21333rem 0;
+}
+
+.wrap .inner-content .detail > dl dd > div > span {
+  font-size: 0.42667rem;
+  padding: 0.21333rem 0;
+}
+
+.wrap .inner-content .detail > dl dd > div > p {
+  font-size: 0.42667rem;
+  padding: 0.21333rem 0;
+  line-height: 0.53333rem;
+}
+
+.wrap .inner-content .detail > dl dd > div > p > span {
+  border: 1px solid green;
+  color: green;
+  padding: 0.05333rem 0.10667rem;
+  margin-left: 0.16rem;
+  border-radius: 0.16rem;
+}
+
+.wrap .inner-content .Btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrap .inner-content .Btn > button {
+  display: block;
+  width: 45%;
+  padding: 0.26667rem 0;
+  font-size: 0.48rem;
+  text-align: center;
+  border: none;
+  border: 1px solid #999;
+  border-radius: 0.21333rem;
+}
+
+.wrap .inner-content .Btn .read {
+  background: orangered;
+  color: #fff;
+}
+
+.wrap .inner-content .Btn .download {
+  background: #fff;
+  color: #999;
+}
+
+.wrap .inner-content .detail-con {
+  width: 100%;
+  height: 2.8rem;
+  overflow: hidden;
+  margin: 0.26667rem 0;
+  box-sizing: border-box;
+  padding: 0.13333rem;
+}
+
+.wrap .inner-content .detail-con > p {
+  font-size: 0.42667rem;
+  height: 100%;
+  text-indent: 0.85333rem;
+}
+
+.wrap .inner-content .on {
+  height: 5.06667rem;
+}
+
+.wrap .inner-content .New {
+  padding: 0.16rem 0;
+  border-top: 0.02667rem solid #ccc;
+}
+
+.wrap .inner-content .New p {
+  text-align: center;
+  color: #666;
+  font-size: 0.42667rem;
+}
+
+.wrap .inner-content .background {
+  width: 100%;
+  height: 0.26667rem;
+  background: #efeff0;
+}
+
+.wrap .inner-content .Type {
+  width: 100%;
+  padding: 0.26667rem 0;
+}
+
+.wrap .inner-content .Type h4 {
+  font-size: 0.42667rem;
+  text-indent: 0.4rem;
+  color: #666;
+}
+
+.wrap .inner-content .Type .type {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrap .inner-content .Type .type span {
+  padding: 0.13333rem 0.53333rem;
+  border: 1px solid #ccc;
+  margin: 0.26667rem;
+  text-align: center;
+  font-size: 0.42667rem;
+  border-radius: 0.16rem;
+  background: palegreen;
+}
+
+.wrap .inner-content .Type .type span:nth-child(3n) {
+  background: salmon;
+}
+
+.wrap .inner-content .others,
+.wrap .inner-content .infromation {
+  width: 100%;
+  padding: 0.26667rem 0;
+}
+
+.wrap .inner-content .others p,
+.wrap .inner-content .infromation p {
+  font-size: 0.42667rem;
+  text-indent: 0.4rem;
+  color: #666;
+}
+
+.wrap .inner-content .others h4,
+.wrap .inner-content .others h5,
+.wrap .inner-content .infromation h4,
+.wrap .inner-content .infromation h5 {
+  font-size: 0.42667rem;
+  text-indent: 0.4rem;
+  color: #666;
+}
+
+.wrap .inner-content .others .others-con dl,
+.wrap .inner-content .infromation .others-con dl {
+  width: 30%;
+  padding: 0.26667rem;
+}
+
+.wrap .inner-content .others .others-con dl img,
+.wrap .inner-content .infromation .others-con dl img {
+  display: block;
+  width: 100%;
+}
+
+.wrap .inner-content .others .others-con h5,
+.wrap .inner-content .infromation .others-con h5 {
+  font-size: 0.37333rem;
+}
+/*# sourceMappingURL=detail.css.map */

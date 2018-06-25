@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../scss/detail.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a href="javascript:history.back()" class="top_back"></a>
+            <h4>老九门</h4>
+            <a href="../index.html" class="home">
+            </a>
+        </header>
+        <div class="inner-content">
+            <div class="detail"></div>
+            <script id="detail-tpl" type="test/x-handlebars-template">
+                <dl>
+                    <dt>
+                        <img src="{{cover}}" alt="">
+                     </dt>
+                    <dd>
+                        <h4>{{title}}</h4>
+                        <div class="inner">
+                            <b>{{authors}}</b>
+                            <span>{{score_count}}个评价</span>
+                            <span>价格：{{price}}书币/千字</span>
+                            <p>字数：{{#ceil word_count}}{{/ceil}}万 <span>{{#if finish}}已完结{{else}}连载中{{/if}}</span></p>
+                        </div>
+                    </dd>
+                </dl>
+            </script>
+            <div class="Btn">
+                <button class="read">开始阅读</button>
+                <button class="download">下载</button>
+            </div>
+            <div class="detail-con">
+            </div>
+            <script id="con-tpl" type="test/x-handlebars-template">
+                <p>
+                    {{content}}
+                </p>
+            </script>
+            <div class="New">
+
+            </div>
+            <script id="New-tpl" type="test/x-handlebars-template">
+                <p class='newPage' data-new='{{latest_id}}'>
+                    <span> 最新章节:</span> {{latest}}
+                </p>
+            </script>
+            <div class="background"></div>
+            <div class="Type">
+                <h4>类别标签</h4>
+                <div class="type"></div>
+                <script id="type-tpl" type="test/x-handlebars-template">
+                    {{#each this}}
+                    <span>{{this}}</span> {{/each}}
+                </script>
+            </div>
+            <div class="background"></div>
+            <div class="others">
+                <h4>作者的其他图书</h4>
+                <div class="others-con"></div>
+                <script id="others-tpl" type="test/x-handlebars-template">
+                    {{#each this}}
+                    <dl>
+                        <dt>
+                            <img src="{{cover}}" alt="">
+                        </dt>
+                        <dd>
+                            <h5>{{title}}</h5>
+                        </dd>
+                    </dl>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="background"></div>
+            <div class="infromation">
+                <h4>
+                    图书信息
+                </h4>
+                <div class="infro"></div>
+            </div>
+            <script id="infro-tpl" type="test/x-handlebars-template">
+                <p>
+                    版权：{{rights}}
+                </p>
+            </script>
+        </div>
+        <script src="../js/libs/require.js"></script>
+        <script>
+            require(['../js/main.js'], function() {
+                require(['detail'])
+            })
+        </script>
+    </div>
+</body>

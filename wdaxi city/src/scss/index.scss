@@ -1,0 +1,406 @@
+@import "tpl/_common.scss";
+@import "tpl/_config.scss";
+@import "tpl/_mixin.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    header {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 pxTorem(44px);
+        border-bottom: 1px solid #ddd;
+        background: #efeff0;
+        .header {
+            width: 100%;
+            height: pxTorem(44px);
+            line-height: pxTorem(44px);
+            display: flex;
+            justify-content: space-between;
+            >span {
+                flex: 1;
+                text-align: center;
+                color: #333;
+                font-size: pxTorem($fz16);
+            }
+            .active {
+                color: #ff6600;
+                &::after {
+                    content: '';
+                    width: pxTorem(35px);
+                    height: pxTorem(1px);
+                    display: block;
+                    margin: 0 auto;
+                    background: #777;
+                }
+            }
+            &:before {}
+        }
+        .sign_in {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            background: url(http://image.read.duokan.com/mfsv2/download/s010/p01O5K5DzsAZ/2ZODzjwkRQh7l3.png) center no-repeat;
+            background-size: 50%;
+        }
+        .login {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01j041d5DOT/boUg2EJlVetOMC.png) no-repeat center;
+            background-size: 50%;
+        }
+    }
+    main {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .tab-content {
+            width: 100%;
+            height: 100%;
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+.serch_btn {
+    width: 95%;
+    margin: pxTorem(10px) auto;
+    box-sizing: border-box;
+    padding: 0 pxTorem(10px);
+    .tab-hander {
+        display: flex;
+        border: 1px solid #ccc;
+        .search {
+            display: block;
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01dSYLeWtSR/tY73MgTfVw7UAS.png) no-repeat 10px center;
+            background-size: 50%;
+        }
+        input {
+            flex: 1;
+            font-size: pxTorem(16px)
+        }
+    }
+}
+
+.right {
+    box-sizing: border-box;
+    padding-right: pxTorem(60px);
+    >span {
+        position: absolute;
+        right: pxTorem(10px);
+        top: pxTorem(10px);
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+        float: right;
+        border-radius: 4px;
+        background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p014nDc0lHYW/lDeZ3lL4nmgnmf.png) no-repeat center;
+        background-size: 60%;
+        border: 1px solid #eee;
+    }
+    .btn-switch {
+        background-image: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01yLF3fEj8l/b7UfAdlfufQKML.png);
+    }
+}
+
+.banner {
+    width: 100%;
+    .banner-list {
+        width: 100%;
+        >.swiper-slide {
+            width: 100%;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    li {
+        width: 20%;
+        padding: pxTorem(10px) 0;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        span {
+            font-size: pxTorem(14px);
+            display: block;
+            text-align: center;
+            padding: pxTorem(5px) 0;
+        }
+    }
+}
+
+.backG {
+    width: 100%;
+    height: pxTorem(10px);
+    background: $group-btm-bg;
+}
+
+.weekHot,
+.time {
+    width: 100%;
+    box-sizing: border-box;
+    padding: pxTorem(10px);
+    h4 {
+        padding: pxTorem(5px);
+        border-left: #ff6600 5px solid;
+        font-size: pxTorem(16px);
+    }
+    .weekList {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 30%;
+            margin: pxTorem(5px);
+            img {
+                display: block;
+                width: 100%;
+                height: pxTorem(150px);
+            }
+            span {
+                display: block;
+                font-size: pxTorem(14px);
+                text-align: center;
+                padding: pxTorem(5px) 0;
+            }
+        }
+    }
+    >p {
+        padding: pxTorem(10px);
+        text-align: center;
+        font-size: pxTorem(16px);
+        border-top: 2px solid #ccc;
+    }
+}
+
+.recommend,
+.girl,
+.boy,
+.inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: pxTorem(10px);
+    h4 {
+        padding: pxTorem(5px);
+        border-left: #ff6600 5px solid;
+        font-size: pxTorem(16px);
+    }
+    .recommendkList,
+    .girlList {
+        li {
+            padding: pxTorem(10px) 0;
+            dl {
+                width: 100%;
+                display: flex;
+                dt {
+                    width: 35%;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: pxTorem(150px);
+                    }
+                }
+                dd {
+                    padding-left: pxTorem(10px);
+                    width: 65%;
+                    h6 {
+                        line-height: pxTorem(30px);
+                        font-size: pxTorem(16px)
+                    }
+                    span {
+                        line-height: pxTorem(30px);
+                        font-size: pxTorem(14px)
+                    }
+                    p {
+                        @include line(2);
+                        line-height: pxTorem(26px);
+                        font-size: pxTorem(14px)
+                    }
+                    ul {
+                        display: flex;
+                        li {
+                            span {
+                                font-size: pxTorem(12px);
+                                border: 1px solid $green-color;
+                                border-radius: pxTorem(5px);
+                                flex-shrink: 0;
+                                padding: pxTorem(5px) pxTorem(2px);
+                                margin: 0 pxTorem(1px);
+                            }
+                        }
+                    }
+                }
+            }
+            >b {
+                color: #ff6600;
+                font-size: pxTorem(16px);
+                font-weight: 600;
+                padding-right: pxTorem(10px);
+            }
+            >span {
+                font-size: pxTorem(16px);
+                text-indent: pxTorem(10px)
+            }
+            >em {
+                padding-left: pxTorem(25px);
+                color: #777;
+            }
+        }
+    }
+    >p {
+        display: flex;
+        justify-content: space-between;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        >span {
+            text-align: center;
+            display: block;
+            width: 50%;
+            height: 100%;
+            &:first-child {
+                border-right: 2px solid #ccc;
+            }
+        }
+        text-align: center;
+        font-size: pxTorem(16px);
+        border-top: 2px solid #ccc;
+    }
+}
+
+.theme {
+    width: 100%;
+    box-sizing: border-box;
+    padding: pxTorem(10px);
+    h4 {
+        padding: pxTorem(5px);
+        border-left: #ff6600 5px solid;
+        font-size: pxTorem(16px);
+    }
+    >.weekList {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 47%;
+            margin: pxTorem(5px);
+            img {
+                display: block;
+                width: 100%;
+                height: pxTorem(150px);
+            }
+            span {
+                display: block;
+                font-size: pxTorem(14px);
+                text-align: center;
+                padding: pxTorem(5px) 0;
+            }
+        }
+    }
+    >p {
+        padding: pxTorem(10px);
+        text-align: center;
+        font-size: pxTorem(16px);
+        border-top: 2px solid #ccc;
+    }
+}
+
+.up {
+    width: 100%;
+    .inner {
+        width: 100%;
+    }
+    .load {
+        width: 100%;
+        padding: pxTorem(10px);
+        text-align: center;
+        font-size: pxTorem(16px);
+    }
+}
+
+.right-list {
+    li {
+        padding: pxTorem(10px) 0;
+        dl {
+            width: 100%;
+            display: flex;
+            dt {
+                width: 35%;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: pxTorem(150px);
+                }
+            }
+            dd {
+                padding-left: pxTorem(10px);
+                width: 65%;
+                h6 {
+                    line-height: pxTorem(30px);
+                    font-size: pxTorem(16px)
+                }
+                span {
+                    line-height: pxTorem(30px);
+                    font-size: pxTorem(14px)
+                }
+                p {
+                    @include line(2);
+                    line-height: pxTorem(30px);
+                    font-size: pxTorem(14px)
+                }
+            }
+        }
+    }
+}
+
+.right-shelf {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        width: 30%;
+        margin: pxTorem(5px);
+        >dl {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            dt {
+                width: 100%;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: pxTorem(150px);
+                }
+            }
+            dd {
+                span,
+                p {
+                    display: block;
+                    display: none;
+                }
+                h6 {
+                    font-size: pxTorem(16px);
+                    text-align: center;
+                    padding: pxTorem(5px) 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search</title>
+    <link rel="stylesheet" href="../scss/search.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <a href="javascript:history.back()" class="top_back"></a>
+            <div id="search-input" class="search-input">
+                <b class="search-input_mi">
+                </b>
+                <input type="text" value="" placeholder="输入书名/作者/关键字">
+                <div class="search-input_btn" id="Tag_84">搜索</div>
+            </div>
+        </div>
+        <div class="inner-content">
+            <div>
+                <div class="history">
+                    <ul class="type-tags">
+                    </ul>
+                    <script id="type-tpl" type="text/x-handlebars-template">
+                        {{#each this}}
+                        <li class="tag">{{ad_name}}
+                        </li>
+                        {{/each }}
+                    </script>
+                    <ol class="history-list">
+                    </ol>
+                    <script id="history-list" type="text/x-handlebars-template">
+                        {{#each}}
+                        <li class="tag">{{this}}<span>&times;</span>
+                        </li>
+                        {{/each}}
+                    </script>
+                </div>
+
+                <ul class="shlf-list search-list">
+                </ul>
+                <script id="shlf-tpl" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li>
+                        <dl>
+                            <dt>
+                            <img src="{{cover}}" alt="">
+                            </dt>
+                            <dd>
+                                <h4>{{title}}</h4>
+                                <p>{{intro}}</p>
+                                {{#each role}}
+                                <span>{{1}}</span> {{/each }}
+                            </dd>
+                        </dl>
+                    </li>
+                    {{/each }}
+                </script>
+            </div>
+        </div>
+        <script src="../js/libs/require.js"></script>
+        <script>
+            require(['../js/main.js'], function() {
+                require(['search'])
+            })
+        </script>
+
+    </div>
+</body>
+
+</html>
